@@ -1,16 +1,11 @@
-# This is a sample Python script.
+import tensorflow as tf
+import keras
+from keras.src.legacy.preprocessing.text import Tokenizer as Tokenizer
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+sentence = ['I am boy','I am tall']
 
+tokenizer = Tokenizer(num_words=100)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+tokenizer.fit_on_texts(sentence)
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('World')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(tokenizer.to_json())
