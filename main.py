@@ -9,3 +9,4 @@ tokenizer = Tokenizer(num_words=100)
 tokenizer.fit_on_texts(sentence)
 
 print(tokenizer.to_json())
+print(sentence)
