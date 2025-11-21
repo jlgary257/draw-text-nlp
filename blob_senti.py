@@ -1,6 +1,6 @@
 from textblob import TextBlob
 
-text = "Today is a beatiful day. Tomorrow will be even better."
+text = "Today is a beautiful day. Tomorrow will be even better."
 blob = TextBlob(text)
 
 print(blob.correct())
